@@ -51,6 +51,13 @@ body {
   display:inline-block;
   float:none;
 }
+#skillset {
+  background-color:rgba(0, 0, 0, 0.5);
+  border:none;
+  padding:8px 20px 25px 20px;
+  width:50%;
+  display:inline-block;
+  float:none;
 .section {
   padding:1.5em;
 }
