@@ -135,18 +135,15 @@
             <div class="section">
               <!-- Edit Content -->
               <p class="lead">Skillset</p>
-              <div id="divProgress">HTML</div>
+                <div id="circle"></div>
                 <script>
-                  $("#divProgress").circularloader({
-                    backgroundColor: "#ffffff",//background colour of inner circle
-                    fontColor: "#000000",//font color of progress text
-                    fontSize: "40px",//font size of progress text
-                    radius: 70,//radius of circle
-                    progressBarBackground: "#cdcdcd",//background colour of circular progress Bar
-                    progressBarColor: "#aaaaaa",//colour of circular progress bar
-                    progressBarWidth: 25,//progress bar width
-                    progressPercent: 80,//progress percentage out of 100
-                    showText: true,//show progress text or not
+                  $('#circle').circleProgress({
+                      value: 0.75,
+                      size: 80,
+                      fill: {
+                          gradient: ["red", "orange"]
+                      }
+                  });
                 </script>
             </div>
           </div>
@@ -164,7 +161,7 @@
     <script src="jquery.nav.js"></script>
     <script src="jquery.scrollify.min.js"></script>
     <script src="lightbox.min.js"></script>
-    <script src="CircularLoader.js"></script>
+    <script src="circle-progress.js"></script>
 
     <!-- Script Options -->
 	  <script>
