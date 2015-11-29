@@ -138,103 +138,103 @@
               <div class="circle"></div>
               <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
               <script src="http://kottenator.github.io/jquery-circle-progress/dist/circle-progress.js"></script>
-<script>
-$('.circle').circleProgress({
-  value: 1,
-  size: 200,
-  thickness: 10,
+              <script>
+                $('.circle').circleProgress({
+                  value: .75,
+                  size: 100,
+                  thickness: 5,
 
-  drawFrame: function(v) {
-      var ctx = this.ctx,
-          s = this.size,
-          r = this.radius * 0.9,
-          t = this.getThickness(),
-          da = Math.PI / 3,
-          dx = r / 10,
-          dy = r / 10 + 25,
-          lc = 'butt',
-          lj = 'miter';
+                  drawFrame: function(v) {
+                    var ctx = this.ctx,
+                    s = this.size,
+                    r = this.radius * 0.9,
+                    t = this.getThickness(),
+                    da = Math.PI / 3,
+                    dx = r / 10,
+                    dy = r / 10 + 25,
+                    lc = 'butt',
+                    lj = 'miter';
 
-      this.lastFrameValue = v;
-      ctx.clearRect(0, 0, this.size, this.size);
-      ctx.lineWidth = t;
-      ctx.lineJoin = lj;
-      ctx.lineCap = lc;
+                    this.lastFrameValue = v;
+                    ctx.clearRect(0, 0, this.size, this.size);
+                    ctx.lineWidth = t;
+                    ctx.lineJoin = lj;
+                    ctx.lineCap = lc;
 
-      function getX(angle) {
-          return r * (1 + Math.cos(angle));
-      }
+                    function getX(angle) {
+                      return r * (1 + Math.cos(angle));
+                    }
 
-      function getY(angle) {
-          return r * (1 + Math.sin(angle));
-      }
+                    function getY(angle) {
+                      return r * (1 + Math.sin(angle));
+                    }
 
-      var a1 = -Math.PI * 5 / 6 + da,
-          x1 = getX(a1) + dx,
-          y1 = getY(a1) + dy;
+                    var a1 = -Math.PI * 5 / 6 + da,
+                    x1 = getX(a1) + dx,
+                    y1 = getY(a1) + dy;
 
-      var a2 = -Math.PI / 6 + da,
-          x2 = getX(a2) + dx,
-          y2 = getY(a2) + dy;
+                    var a2 = -Math.PI / 6 + da,
+                    x2 = getX(a2) + dx,
+                    y2 = getY(a2) + dy;
 
-      var a3 = Math.PI / 2 + da,
-          x3 = getX(a3) + dx,
-          y3 = getY(a3) + dy;
+                    var a3 = Math.PI / 2 + da,
+                    x3 = getX(a3) + dx,
+                    y3 = getY(a3) + dy;
 
-      // Draw "empty" path
-      ctx.save();
-      ctx.beginPath();
-      ctx.moveTo(x1, y1);
-      ctx.lineTo(x2, y2);
-      ctx.lineTo(x3, y3);
-      ctx.closePath();
-      ctx.strokeStyle = this.emptyFill;
-      ctx.stroke();
-      ctx.restore();
+                    // Draw "empty" path
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.lineTo(x3, y3);
+                    ctx.closePath();
+                    ctx.strokeStyle = this.emptyFill;
+                    ctx.stroke();
+                    ctx.restore();
 
-      // Draw "filled" path
-      ctx.save();
-      ctx.beginPath();
+                    // Draw "filled" path
+                    ctx.save();
+                    ctx.beginPath();
 
-      var p0 = 0.96;
-      ctx.moveTo(
-          x1 * p0 + x3 * (1 - p0),
-          y1 * p0 + y3 * (1 - p0)
-      );
+                    var p0 = 0.96;
+                    ctx.moveTo(
+                      x1 * p0 + x3 * (1 - p0),
+                      y1 * p0 + y3 * (1 - p0)
+                    );
 
-      ctx.lineTo(x1, y1);
+                    ctx.lineTo(x1, y1);
 
-      var p1 = v > 1 / 3 ? 1 : v * 3;
-      ctx.lineTo(
-          x2 * p1 + x1 * (1 - p1),
-          y2 * p1 + y1 * (1 - p1)
-      );
+                    var p1 = v > 1 / 3 ? 1 : v * 3;
+                    ctx.lineTo(
+                      x2 * p1 + x1 * (1 - p1),
+                      y2 * p1 + y1 * (1 - p1)
+                    );
 
-      if (v > 1 / 3) {
-          var p2 = v > 2 / 3 ? 1 : v * 3 - 1;
-          ctx.lineTo(
-              x3 * p2 + x2 * (1 - p2),
-              y3 * p2 + y2 * (1 - p2)
-          );
-      }
+                    if (v > 1 / 3) {
+                      var p2 = v > 2 / 3 ? 1 : v * 3 - 1;
+                      ctx.lineTo(
+                        x3 * p2 + x2 * (1 - p2),
+                        y3 * p2 + y2 * (1 - p2)
+                      );
+                    }
 
-      if (v > 2 / 3) {
-          var p3 = v * 3 - 2;
-          ctx.lineTo(
-              x1 * p3 + x3 * (1 - p3),
-              y1 * p3 + y3 * (1 - p3)
-          );
-      }
+                    if (v > 2 / 3) {
+                      var p3 = v * 3 - 2;
+                      ctx.lineTo(
+                        x1 * p3 + x3 * (1 - p3),
+                        y1 * p3 + y3 * (1 - p3)
+                      );
+                    }
 
-      if (v >= 1)
-          ctx.closePath();
+                    if (v >= 1)
+                    ctx.closePath();
 
-      ctx.strokeStyle = this.arcFill;
-      ctx.stroke();
-      ctx.restore();
-  }
-});
-</script>
+                    ctx.strokeStyle = this.arcFill;
+                    ctx.stroke();
+                    ctx.restore();
+                  }
+                });
+                </script>
             </div>
           </div>
         </div>
