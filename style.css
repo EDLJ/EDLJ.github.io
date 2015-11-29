@@ -36,7 +36,8 @@ body {
   padding:2px;
 }
 #projects {
-  background-image:url("panel-bg.jpg");
+  background-color:rgba(0,0,0,0.5));
+  border:none;
   background-repeat:no-repeat;
   background-size:100%;
   background-position:center center;
@@ -48,7 +49,8 @@ body {
   float:none;
 }
 #contact {
-  background-image:url("panel-bg.jpg");
+  background-color:rgba(0,0,0,0.5));
+  border:none;
   background-repeat:no-repeat;
   background-size:100%;
   background-position:center center;
