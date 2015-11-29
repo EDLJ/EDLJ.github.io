@@ -38,11 +38,6 @@ body {
 #projects {
   background-color:rgba(0,0,0,0.5));
   border:none;
-  background-repeat:no-repeat;
-  background-size:100%;
-  background-position:center center;
-  background-attachment:fixed;
-  background-size:cover;
   padding:8px 20px 25px 20px;
   width:50%;
   display:inline-block;
@@ -51,11 +46,6 @@ body {
 #contact {
   background-color:rgba(0,0,0,0.5));
   border:none;
-  background-repeat:no-repeat;
-  background-size:100%;
-  background-position:center center;
-  background-attachment:fixed;
-  background-size:cover;
   padding:8px 20px 25px 20px;
   width:50%;
   display:inline-block;
