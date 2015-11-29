@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Edward Laverty">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Edward Laverty | Home Base</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet"/>
+    <!-- Self Styling -->
+    <link href="style.css" rel="stylesheet"/>
+    <link href="lightbox.css" rel="stylesheet">
+    <script>
+      $(function() {
+        $.scrollify({
+		        section : "section",
+		        sectionName : "section-name",
+		        easing: "easeOutExpo",
+		        scrollSpeed: 1100,
+		        offset : 0,
+		        scrollbars: true,
+		        before:function() {},
+		        after:function() {},
+		        afterResize:function() {}
+	        });
+    </script>
+  </head>
+<body>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <div class="user" style="background-image:url('profilepic.jpg')"></div>
+              <h3 class="masthead-brand">Edward Laverty</h3>
+              <nav>
+                <ul class="nav masthead-nav" id="nav">
+                  <li><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></li>
+                  <li class="current"><a href="#section-1"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                  <li><a href="#section-2">Projects</a></li>
+                  <li><a href="#section-3">Contact</a></li>
+                  <li><a href="https://github.com/EDLJ" target="_blank">Resume</a></li>
+                  <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <section data-section-name="home">
+          <div class="inner cover" id="container">
+<!-- Section 1  / Top -->
+            <div class="section-wrapper" id="section-1">
+              <div class="section">
+                <h1 class="cover-heading">Home Base</h1>
+            <p class="lead">Where self-taught experiments lead to results.</p>
+            <p class="lead">
+              <a href="http://www.google.com" target="_blank" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+              </div>
+            </div>
+<!-- Footer -->
+                <div class="mastfoot">
+            <div class="inner">
+              <p>Portfolio, by <a href="http://www.linkedin.com/in/lavertyeddie" target="_blank">Edward Laverty</a>.</p>
+            </div>
+          </div>
+
+      </div>
+    </section>
+    </div>
+
+<div class="clear"></div>
+
+  <!-- Section 2 / Projects -->
+  <section>
+  <section id="projects" class="panel projects" data-section-name="projects">
+    <div class="cover-container">
+      <div class="inner cover" id="container">
+                    <div class="section-wrapper" id="section-2">
+                      <div class="section">
+                        <p class="lead">Projects</p>
+                          <a href="project-thumb1.jpg" data-lightbox="projectimages" data-title="Project #1"><img src="project-thumb1.jpg" style="width:100px;height:80px" class="img-rounded"></a>
+                          <a href="project-thumb2.jpg" data-lightbox="projectimages" data-title="Project #2"><img src="project-thumb2.jpg" style="width:100px;height:80px" class="img-rounded"></a>
+                          <a href="project-thumb3.jpg" data-lightbox="projectimages" data-title="Project #3"><img src="project-thumb3.jpg" style="width:100px;height:80px" class="img-rounded"></a>
+                          <a href="project-thumb4.jpg" data-lightbox="projectimages" data-title="Project #4"><img src="project-thumb4.jpg" style="width:100px;height:80px" class="img-rounded"></a>
+                        </div>
+                      </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<div class="clear"></div>
+
+  <!-- Section 3 / Contact -->
+  <section id="contact" class="panel contact" data-section-name="contact">
+    <div class="cover-container">
+      <div class="inner cover" id="container">
+        <div class="section-wrapper" id="section-3">
+          <div class="section">
+            <p class="lead">Get in touch!</p>
+            <a href="mailto:laverty.eddie@gmail.com?subject=Home%20Base%20Inquiry">
+              <button type="button" class="btn btn-default" aria-label="Left Align">
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="jquery.nav.js"></script>
+    <script src="jquery.scrollify.min.js"></script>
+    <script src="lightbox.min.js"></script>
+
+    <!-- Script Options -->
+	  <script>
+		  $(document).ready(function() {
+      $('#nav').onePageNav({
+      currentClass: 'current',
+      changeHash: false,
+      scrollSpeed: 750,
+      scrollThreshold: 0.5,
+      filter: '',
+      easing: 'swing',
+      begin: function() {
+          //I get fired when the animation is starting
+      },
+      end: function() {
+          //I get fired when the animation is ending
+      },
+      scrollChange: function($currentListItem) {
+          //I get fired when you enter a section and I pass the list item of the section
+      }
+  });
+	  </script>
+    <script>
+      lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true,
+    });
+    </script>
+  </body>
+</html>
