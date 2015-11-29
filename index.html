@@ -35,6 +35,16 @@
 	        });
     </script>
   </head>
+<script src="circle-progress.js"></script>
+  <script>
+                  $('#circle').circleProgress({
+                      value: 0.75,
+                      size: 80,
+                      fill: {
+                          gradient: ["red", "orange"]
+                      }
+                  });
+  </script>
 <body>
   <div class="site-wrapper">
     <div class="site-wrapper-inner">
@@ -136,15 +146,6 @@
               <!-- Edit Content -->
               <p class="lead">Skillset</p>
                 <div id="circle"></div>
-                <script>
-                  $('#circle').circleProgress({
-                      value: 0.75,
-                      size: 80,
-                      fill: {
-                          gradient: ["red", "orange"]
-                      }
-                  });
-                </script>
             </div>
           </div>
         </div>
