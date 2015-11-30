@@ -21,19 +21,20 @@
     <link href="style.css" rel="stylesheet"/>
     <link href="lightbox.css" rel="stylesheet">
     <script>
-      $(function() {
-        $.scrollify({
-		        section : "section",
-		        sectionName : "section-name",
-		        easing: "easeOutExpo",
-		        scrollSpeed: 1100,
-		        offset : 0,
-		        scrollbars: true,
-		        before:function() {},
-		        after:function() {},
-		        afterResize:function() {}
-	        });
-    </script>
+    $(function() {
+      $.scrollify({
+      section:".panel"
+    });
+
+    $(".scroll,.scroll-btn").click(function(e) {
+      e.preventDefault();
+
+      $.scrollify.next();
+    });
+
+
+    });
+			</script>
   </head>
 <body>
   <div class="site-wrapper">
