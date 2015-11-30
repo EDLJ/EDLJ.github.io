@@ -33,9 +33,10 @@ body {
   background-repeat:no-repeat;
   background-attachment:fixed;
   position:absolute;
-  top:300px;
+  top:800px;
   background-size:100%;
   padding:2px;
+  display:inline-block;
 }
 #projects {
   background-color:rgba(0, 0, 0, 0.5);
