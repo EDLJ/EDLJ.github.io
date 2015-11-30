@@ -22,12 +22,18 @@
     <link href="lightbox.css" rel="stylesheet">
     <script>
     $(function() {
-      $.scrollify({
-      section:".panel"
-    });
-      $.scrollify.next();
-    });
-    });
+	$.scrollify({
+		section:".panel"
+	});
+
+	$(".clear").click(function(e) {
+		e.preventDefault();
+
+		$.scrollify.next();
+	});
+
+
+});
 			</script>
   </head>
 <body>
