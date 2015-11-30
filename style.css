@@ -33,6 +33,7 @@ body {
   background-repeat:no-repeat;
   background-attachment:fixed;
   position:absolute;
+  top:300px;
   background-size:100%;
   padding:2px;
 }
